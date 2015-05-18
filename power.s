@@ -23,7 +23,8 @@ addl $8, %esp #move the stack pointer back
 popl %ebx #the second answer is already in eax.i
             #we saved the first answer ontoi the stack
             #so now we can just pop it out into ebx
-addl %eax, %ebx #add them together the result is in %ebx
+addl %eax, %ebx #add them together the result is in %ebx #to subtract the
+results of the power use subl
 movl $1, %eax #exit (%ebx is returned)
 int $0x80
 #PURPOSE:  This function is used to compute
